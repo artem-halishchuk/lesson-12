@@ -1,0 +1,59 @@
+@import url(reset.css);
+
+body {
+  background-image: url("../images/space.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.animation {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.earth-moon {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.earth {
+  height: 100%;
+  animation-name: cycl;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+.moon {
+  position: absolute;
+  height: 90%;
+  width: 8vh;
+  animation-name: cycl;
+  animation-duration: calc(4s * 27.32);
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+.moon img {
+  width: 100%;
+}
+
+@keyframes cycl {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
